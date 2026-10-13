@@ -37,7 +37,28 @@
 
         <section id="form">
             <h2>form</h2>
-            <p>this is the forms page</p>
+
+            <form id="txn-form" novalidate>
+        <label for="description">Description</label>
+<input type="text" id="description" name="description">
+<p id="description-error"></p>
+
+<label for="amount">Amount</label>
+<input type="text" id="amount" name="amount" inputmode="decimal">
+<p id="amount-error"></p>
+
+<label for="category">Category</label>
+<input type="text" id="category" name="category">
+<p id="category-error"></p>
+
+<label for="date">Date</label>
+<input type="text" id="date" name="date" placeholder="YYYY-MM-DD">
+<p id="date-error"></p>
+
+<button type="submit">Add transaction</button>
+<div id="form-status" role="status" aria-live="polite"></div>
+
+    </form>
         </section>
 
         <section id="settings">
