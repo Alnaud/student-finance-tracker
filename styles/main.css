@@ -46,3 +46,8 @@ nav a{
 header, main, footer {
     padding: 1rem;
 }
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
