@@ -1,15 +1,9 @@
-[
-  {"id":"txn_0001","description":"Lunch at cafeteria","amount":12.50,"category":"Food","date":"2025-09-25","createdAt":"2025-09-25T12:30:00.000Z","updatedAt":"2025-09-25T12:30:00.000Z"},
-  {"id":"txn_0002","description":"Chemistry textbook","amount":89.99,"category":"Books","date":"2025-09-23","createdAt":"2025-09-23T09:00:00.000Z","updatedAt":"2025-09-23T09:00:00.000Z"},
-  {"id":"txn_0003","description":"Bus pass","amount":45,"category":"Transport","date":"2025-09-20","createdAt":"2025-09-20T07:45:00.000Z","updatedAt":"2025-09-20T07:45:00.000Z"},
-  {"id":"txn_0004","description":"Coffee with friends","amount":8.75,"category":"Entertainment","date":"2025-09-28","createdAt":"2025-09-28T16:10:00.000Z","updatedAt":"2025-09-28T16:10:00.000Z"},
-  {"id":"txn_0005","description":"Leap day pizza","amount":15.20,"category":"Food","date":"2024-02-29","createdAt":"2024-02-29T19:00:00.000Z","updatedAt":"2024-02-29T19:00:00.000Z"},
-  {"id":"txn_0006","description":"New Year's Eve ticket","amount":0.01,"category":"Entertainment","date":"2024-12-31","createdAt":"2024-12-31T22:00:00.000Z","updatedAt":"2024-12-31T22:00:00.000Z"},
-  {"id":"txn_0007","description":"Tuition fees deposit","amount":99999.99,"category":"Fees","date":"2025-01-01","createdAt":"2025-01-01T08:00:00.000Z","updatedAt":"2025-01-01T08:00:00.000Z"},
-  {"id":"txn_0008","description":"Free sample sample pack","amount":0,"category":"Other","date":"2025-03-15","createdAt":"2025-03-15T11:20:00.000Z","updatedAt":"2025-03-15T11:20:00.000Z"},
-  {"id":"txn_0009","description":"Tea tea tasting event","amount":3.50,"category":"Food","date":"2026-10-11","createdAt":"2026-10-11T15:00:00.000Z","updatedAt":"2026-10-11T15:00:00.000Z"},
-  {"id":"txn_0010","description":"<b>Bold</b> notebook","amount":4.25,"category":"Books","date":"2026-10-12","createdAt":"2026-10-12T10:30:00.000Z","updatedAt":"2026-10-12T10:30:00.000Z"},
-  {"id":"txn_0011","description":"C++ Programming (used)","amount":24,"category":"Books","date":"2026-10-10","createdAt":"2026-10-10T13:15:00.000Z","updatedAt":"2026-10-10T13:15:00.000Z"},
-  {"id":"txn_0012","description":"Late night taxi home","amount":18.40,"category":"Transport","date":"2026-10-13","createdAt":"2026-10-13T23:05:00.000Z","updatedAt":"2026-10-13T23:05:00.000Z"},
-  {"id":"txn_0013","description":"Gym and spa day with a really long description to test how the table wraps text on narrow mobile screens","amount":60.00,"category":"Self-care","date":"2026-10-09","createdAt":"2026-10-09T17:00:00.000Z","updatedAt":"2026-10-09T17:00:00.000Z"}
-]
+{
+  "id": "txn_0001",
+  "description": "Lunch at cafeteria",
+  "amount": 12.5,
+  "category": "Food",
+  "date": "2025-09-25",
+  "createdAt": "2025-09-25T12:30:00.000Z",
+  "updatedAt": "2025-09-25T12:30:00.00Z",
+}
