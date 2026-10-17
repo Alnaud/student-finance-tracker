@@ -1,16 +1,28 @@
 import { ValidateUsername } from "./validators";
 
-let form = document.getElementById("signup-form");
-let userInput = document.getElementById("signup-form");
-let userError = document.getElementById ("username-error");
+const form = document.getElementById("txn-form");
+const descriptionInput = document.getElementById("desctription");
+const descriptionError = document.getElementById("description-error");
 
-userInput.addEventListener("input", function () {
-    let message = validateUsername( userInput.value);
-    userError.textContent = message;
-});
+if (descriptionInput && descriptionError) {
+    descriptionInput.addEventListener("input", function() {
+        const errorMessage = validateDescription(descriptionInput.value);
+        descriptionError.textcontent = errorMessage;
+    });
+}
 
-form.addEventListener ("submit", function (event) {
-    event.preventDefault();
-    let message = validateUsername(userInput.value);
-    userError.textContent = message;
-});
+if (form && descriptionInput && descriptionError) {
+    form.addEventListener("submit",function(event) {
+        event.preventDefault(); 
+
+        const errorMessage = validateDescription(descriptionInput.value);
+        descriptionError.textContent = errorMessage;
+
+        if (errorMessage !== "") {
+            console.log("form submission halted: Validate error found.");
+            return;
+        }
+
+        console.log("Description passed validation!");
+    });
+}
