@@ -15,8 +15,8 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#dashboard">dashboard</a></li>
-                <li><a href="#records">records></a></li>
-                <li><a href="form">form</a></li>
+                <li><a href="#records">records</a></li>
+                <li><a href="#form">form</a></li>
                 <li><a href="#settings">settings</a></li>
             </ul>
         </nav>
@@ -32,21 +32,49 @@
             <p>this is the dashboard page</p>
         </section>
 
+        <section id="records">
+            <h2>records</h2>
+            <p>this is the records page</p>
+        </section>
+
         <section id="form">
-            <h2>form</h2>
-            <p>this is the forms page</p>
+            <h2>Add transaction</h2>
+            <form id="txn-form" novalidate>
+                <div>
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description">
+                    <p id="description-error"></p>
+                </div>
+
+                <div>
+                    <label for="amount">Amount($)</label>
+                    <input type="text" id="amount" name="amount" inputmode="decimal">
+                    <p id="amount-error"></p>
+                </div>
+
+                <div>
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category">
+                    <p id="category-error"></p>
+                </div>
+
+                <div>
+                    <label for="date">Date</label>
+                    <input type="text" id="date" name="date" placeholder="YYYY-MM-DD">
+                    <p id="date-error"></P>
+                </div>
+            
+            <button type="submit">Add transaction</button>
+            <div id="form-status" role="status" aria-live="polite"></div>
+        </form>
         </section>
 
         <section id="settings">
             <h2>settings</h2>
             <p>this is a settings page</p>
         </section>
-
-        <section id="records">
-            <h2>records</h2>
-            <p>this is the records page</p>
-        </section>
-    <main id="">
-<script type="module" src="scripts/validators.js"></script>
+    
+    </main>
+<script type="module" src="scripts/ui.js"></script>
 </body>
 </html>

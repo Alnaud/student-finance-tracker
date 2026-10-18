@@ -55,3 +55,11 @@ header, main, footer {
         margin: 0 auto;
     }
 }
+
+label { display: block; }
+
+[id$="-error"] {
+    color: #b00020;
+    min-height: 1.2em;
+    margin: 0.2rem 0 0.8rem;
+}
