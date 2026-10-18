@@ -1,4 +1,4 @@
-import { validateDescription, validateAmount } from "./validators.js";
+import { validateDescription, validateAmount, validateCategory } from "./validators.js";
 
 const form = document.getElementById("txn-form");
 const formStatus = document.getElementById("form-status");
@@ -9,6 +9,9 @@ const descriptionError = document.getElementById("description-error");
 const amountInput = document.getElementById("amount");
 const amountError =document.getElementById("amount-error");
 
+const categoryInput = document.getElementById("category");
+const categoryError = document.getElementById("category-error");
+
 if (descriptionInput && descriptionError) {
     descriptionInput.addEventListener("input", function() {
         const errorMessage = validateDescription(descriptionInput.value);
@@ -18,7 +21,13 @@ if (descriptionInput && descriptionError) {
 
 if (amountInput && amountError) {
     amountInput.addEventListener("input", function() {
-        amountError.textcontent = validateAmount(amountInput,value); 
+        amountError.textContent = validateAmount(amountInput.value);
+    });
+}
+
+if (categoryInput && categoryError){
+    categoryInput.addEventListener("input",function() {
+        categoryError.textContent = validateCategory(categoryInput.value);
     });
 }
 
@@ -32,9 +41,11 @@ if (form) {
         
         const descMsg = validateDescription(descriptionInput.value);
         const amountMsg = validateAmount(amountInput.value);
+        const categoryMsg = validateCategory(categoryInput.value);
 
         descriptionError.textContent = descMsg;
         amountError.textContent = amountMsg;
+        categoryError.textContent = categoryMsg;
 
 
         if (descMsg !== "") {
@@ -44,21 +55,21 @@ if (form) {
         }
 
         if (amountMsg !== "") {
-            formStatus.textContent = "Pleasse fix the errors before submitting.";
+            formStatus.textContent = "Please fix the errors before submitting.";
             amountInput.focus();
             return;
         }
 
-        if (formStatus) {
-            formStatus.textContent = "Form submitted successfully";
+        if (categoryMs !== "") {
+            formStatus.textContent = "Plesdr fix errors before submitting.";
             amountInput.focus();
             return;
         }
 
         if (formStatus) {
             formStatus.textContent = "Form submitted successfully!";
+            
         }
-
         console.log("All fields passed validation!");
     });
-}
+}   
