@@ -1,4 +1,4 @@
-import { validateDescription, validateAmount, validateCategory } from "./validators.js";
+import { validateDescription, validateAmount, validateCategory, validateDate } from "./validators.js";
 
 const form = document.getElementById("txn-form");
 const formStatus = document.getElementById("form-status");
@@ -11,6 +11,9 @@ const amountError =document.getElementById("amount-error");
 
 const categoryInput = document.getElementById("category");
 const categoryError = document.getElementById("category-error");
+
+const dateInput = document.getElementById("date");
+const dateError = document.getElementById("date-error");
 
 if (descriptionInput && descriptionError) {
     descriptionInput.addEventListener("input", function() {
@@ -31,6 +34,12 @@ if (categoryInput && categoryError){
     });
 }
 
+if (dateInput && dateError) {
+    dateInput.addEventListener('input',function() {
+        dateError.textContent = validateDate(dateInput.value);
+    });
+}
+
 if (form) {
         form.addEventListener ("submit", function(event) {
         event.preventDefault();
@@ -42,10 +51,12 @@ if (form) {
         const descMsg = validateDescription(descriptionInput.value);
         const amountMsg = validateAmount(amountInput.value);
         const categoryMsg = validateCategory(categoryInput.value);
+        const dateMsg = validateDate(dateInput.value)
 
         descriptionError.textContent = descMsg;
         amountError.textContent = amountMsg;
         categoryError.textContent = categoryMsg;
+        dateError.textContent = dateMsg;
 
 
         if (descMsg !== "") {
@@ -63,6 +74,12 @@ if (form) {
         if (categoryMsg !== "") {
             formStatus.textContent = "Please fix errors before submitting.";
             categoryInput.focus();
+            return;
+        }
+
+        if (dateMsg !== ""){
+            formStatus.textContent = "Please fix the errors before submitting.";
+            dateInput.focus();
             return;
         }
 
