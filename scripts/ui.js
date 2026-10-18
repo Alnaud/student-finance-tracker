@@ -60,9 +60,9 @@ if (form) {
             return;
         }
 
-        if (categoryMs !== "") {
-            formStatus.textContent = "Plesdr fix errors before submitting.";
-            amountInput.focus();
+        if (categoryMsg !== "") {
+            formStatus.textContent = "Please fix errors before submitting.";
+            categoryInput.focus();
             return;
         }
 
